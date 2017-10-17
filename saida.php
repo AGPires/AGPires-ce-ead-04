@@ -28,37 +28,34 @@ $contador = 0;
         <h1>
             Tabuada Gerada!
         </h1>
-        <?php
-for ($i=$Inicial; $i <= $Final; $i++) { 
-    $contador++;
-    echo "<table class='table table-bordered' border='0'  align='center' style='width:25%; height:15%;'>";
-    echo "<thead>";
-    echo "<th colspan=2>";
-    echo "Tabela " . $contador;
-    echo "</th>";
-    echo "<tr>";
-    echo "<th>";
-    echo "Fórmula";
-    echo "</th>";
-    echo "<th>";
-    echo "Valor";
-    echo "</th>";
-    echo "</tr>";
-    echo "</thead>";
-    echo "<tbody>";
-    for ($y=$mInicial; $y <= $mFinal; $y++){	
-        echo "<tr>";
-        echo "<td>";
-        echo  $i . " x " . $y . " = "; 
-        echo "</td>";
-        echo "<td>";
-        echo  ($i * $y) . "<br>"; 
-        echo "</td>";
-        echo "</tr>";
-    }
-    echo "</tbody>";
-    echo "</table>";	
-}
-        ?>
+        <?php for ($i=$Inicial; $i <= $Final; $i++) {?>
+     <table class='table table-bordered' border='0'  align='center' style='width:25%; height:15%;'>
+       <thead>
+       <th colspan=2>
+       Tabela <?php echo $i;?>
+       </th>
+       <tr>
+       <th>
+       Fórmula
+       </th>
+       <th>
+       Valor
+       </th>
+       </tr>
+       </thead>
+     <tbody>
+    <?php for ($y=$mInicial; $y <= $mFinal; $y++){	?>
+         <tr>
+         <td>
+       <?php echo  $i . " x " . $y . " = "; ?>
+         </td>
+         <td>
+       <?php echo  ($i * $y) . "<br>"; ?>
+         </td>
+         </tr>
+    <?php } ?>
+     </tbody>
+     </table>	
+<?php } ?> 
     </body>
 </html>
